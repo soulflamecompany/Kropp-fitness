@@ -38,13 +38,40 @@
         </nav>
         <div class="header-actions">
             <button class="header-book-button button" type="button">Book now</button>
-            <button class="header-burger-button" type="button">
+            <button class="header-burger-button" type="button" title="Open menu">
+                <span class="visually-hidden">Open menu</span>
                 <span class="header-burger-button__line"></span>
                 <span class="header-burger-button__line"></span>
                 <span class="header-burger-button__line"></span>
             </button>
         </div>
     </header>
+    <main class="content">
+        <h1 class="visually-hidden">Kropp Fitness Club</h1>
+        <section class="hero">
+            <h2 class="visually-hidden">Upcoming events</h2>
+            <div class="hero-body">
+                <div class="hero-body__info">
+                    New event<br>
+                    coming up /&nbsp;<time datetime="06-07">june 7</time>&nbsp;-&nbsp;<time datetime="06-13">13</time>
+                </div>
+                <h3 class="hero-body__title">Crossfit</h3>
+            </div>
+            <div class="hero-pagination">
+                <ul class="hero-pagination__list">
+                    <li class="hero-pagination__item">
+                        <button class="hero-pagination__button" type="button"></button>
+                    </li>
+                    <li class="hero-pagination__item">
+                        <button class="hero-pagination__button" type="button"></button>
+                    </li>
+                    <li class="hero-pagination__item">
+                        <button class="hero-pagination__button is-current" type="button"></button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
