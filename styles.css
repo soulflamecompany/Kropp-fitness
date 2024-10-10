@@ -303,17 +303,18 @@ h6 {
   content: attr(data-title);
   position: absolute;
   z-index: -1;
-  top: -0.45em;
+  top: -0.3em;
   left: -0.6em;
   font-family: var(--font-family-accent);
   font-size: 2.8em;
+  line-height: 1;
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: var(--color-light-grey);
   opacity: 0.5;
 }
 .backdrop-title.centered::after {
-  top: -0.5em;
+  top: -0.25em;
   left: 50%;
   translate: -50% 0;
 }
@@ -382,6 +383,7 @@ h6 {
   outline: none;
 }
 
+/* HEADER */
 .header {
   display: flex;
   justify-content: space-between;
@@ -549,8 +551,6 @@ h6 {
 /* TRAINING-TYPES SECTION */
 .training-types {
   position: relative;
-  max-width: 1920px;
-  margin-inline: auto;
   padding-top: 70px;
   padding-bottom: 120px;
   background-color: var(--color-dark);
@@ -576,6 +576,9 @@ h6 {
 }
 
 /* JOIN-US SECTION */
+.join-us {
+  background-color: var(--color-dark-alternate);
+}
 .join-us-video-wrapper {
   position: relative;
   display: flex;
@@ -674,6 +677,31 @@ h6 {
   max-width: 400px;
 }
 
+/* LOCATION SECTION */
+.location {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.location-map-image {
+  height: auto;
+}
+.location-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 15px;
+  text-align: center;
+}
+.location-title:not(:last-child) {
+  margin-bottom: 14px;
+}
+.location-description {
+  max-width: 490px;
+}
+.location-description:not(:last-child) {
+  margin-bottom: 37px;
+}
 /* MEDIA  */
 @media (max-width: 1919px) {
   .motivation-card__image {
@@ -718,6 +746,10 @@ h6 {
   }
   .join-us__title:not(:last-child) {
     margin-bottom: 80px;
+  }
+  .location {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 @media (max-width: 767px) {
@@ -780,5 +812,11 @@ h6 {
     flex-direction: column;
     align-items: center;
     row-gap: 20px;
+  }
+  .location-body {
+    padding-block: 40px;
+  }
+  .location-description:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
